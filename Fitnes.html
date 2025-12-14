@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fitnes Trener | Online Programi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #00c853, #009624);
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #00e676;
+    }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    button {
+      background: #00c853;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online Fitnes Trener</h1>
+  <p>Treniraj pametno. Bez teretane. Sa rezultatima.</p>
+</header>
+
+<section>
+  <h2>Moji kursevi</h2>
+  <div class="courses">
+    <div class="card">
+      <h3>Osnovni nivo</h3>
+      <p><strong>Cena:</strong> 19€ / mesečno</p>
+      <ul>
+        <li>Program mršavljenja za početnike</li>
+        <li>Kućni treninzi bez opreme</li>
+        <li>Osnovni plan ishrane</li>
+        <li>Svakodnevni besplatni mejl saveti</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pro nivo</h3>
+      <p><strong>Cena:</strong> 39€ / mesečno</p>
+      <ul>
+        <li>Program za stalnu kondiciju</li>
+        <li>Kombinacija snage i kardija</li>
+        <li>Detaljan plan ishrane</li>
+        <li>Svakodnevni mejl treninzi i motivacija</li>
+        <li>Praćenje napretka</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Premium nivo</h3>
+      <p><strong>Cena:</strong> 79€ / mesečno</p>
+      <ul>
+        <li>Personalizovan trening program</li>
+        <li>Napredni plan ishrane</li>
+        <li>Maksimalni rezultati (snaga, forma, izgled)</li>
+        <li>Svakodnevni mejl + VIP saveti</li>
+        <li>Prioritetna podrška</li>
+      </ul>
+    </div>
+  </div>
+    <div class="card">
+      <h3>Kućni treninzi</h3>
+      <p>Bez opreme, 20–30 min dnevno.</p>
+    </div>
+    <div class="card">
+      <h3>Mršavljenje & kondicija</h3>
+      <p>Fokus na sagorevanje masti.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Testiraj svoju kondiciju</h2>
+  <p>Popuni kratak kviz i dobij besplatan nedeljni plan treninga i ishrane.<br>Uz to, svakodnevno ću ti <strong>besplatno slati mejlove</strong> sa savetima, treninzima i ishranom.</p>
+  <form onsubmit="showResult(event)">
+    <input type="email" required placeholder="Tvoj email" />
+
+    <label>Koliko često treniraš?</label>
+    <select required>
+      <option value="">Izaberi</option>
+      <option>Ne treniram</option>
+      <option>1–2x nedeljno</option>
+      <option>3–5x nedeljno</option>
+    </select>
+
+    <label>Koliko sklekova možeš bez pauze?</label>
+    <select required>
+      <option value="">Izaberi</option>
+      <option>0–5</option>
+      <option>6–15</option>
+      <option>15+</option>
+    </select>
+
+    <label>Cilj:</label>
+    <select required>
+      <option value="">Izaberi</option>
+      <option>Mršavljenje</option>
+      <option>Mišići</option>
+      <option>Kondicija</option>
+    </select>
+
+    <button type="submit">Završi kviz</button>
+  </form>
+
+  <p id="result" style="margin-top:20px; color:#00e676; display:none;">
+    Hvala! Proveri email – dobio si besplatan nedeljni plan treninga i ishrane 💪
+  </p>
+</section>
+
+<footer>
+  <p>Više informacija i saveti: <a href="https://www.instagram.com/mate.ja688" target="_blank" style="color:#00e676;">@mate.ja688</a></p>
+  <p>© 2025 Online Fitnes Trener</p>
+</footer>
+
+<script>
+  function showResult(e) {
+    e.preventDefault();
+    document.getElementById('result').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
